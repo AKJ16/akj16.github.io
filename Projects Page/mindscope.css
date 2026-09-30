@@ -1417,3 +1417,283 @@ VERY SMALL PHONES
 }
 
 }
+
+
+/* =========================================================
+MINDSCOPE PAGE INTRO ANIMATION
+========================================================= */
+
+/*
+
+Initial state.
+
+Elements start slightly below their final position
+
+and fade into view.
+*/
+
+.project-page.intro-started .project-header,
+.project-page.intro-started .hero-video,
+.project-page.intro-started .hero-info,
+.project-page.intro-started .itch-button,
+.project-page.intro-started .section-heading,
+.project-page.intro-started .detail-item,
+.project-page.intro-started .document-card,
+.project-page.intro-started .contribution-card,
+.project-page.intro-started .design-content,
+.project-page.intro-started .design-image-card,
+.project-page.intro-started .gameplay-image-wrapper,
+.project-page.intro-started .project-footer {
+
+opacity: 0;
+
+transform:
+    translateY(25px);
+
+
+}
+
+/* =========================================================
+HEADER
+========================================================= */
+
+.project-page.intro-started .project-header {
+
+animation:
+    projectFadeUp
+    0.7s
+    cubic-bezier(.22, 1, .36, 1)
+    0.05s
+    forwards;
+
+
+}
+
+/* =========================================================
+HERO
+========================================================= */
+
+.project-page.intro-started .hero-video {
+
+animation:
+    projectFadeUp
+    0.7s
+    cubic-bezier(.22, 1, .36, 1)
+    0.15s
+    forwards;
+
+
+}
+
+.project-page.intro-started .hero-info {
+
+animation:
+    projectFadeUp
+    0.7s
+    cubic-bezier(.22, 1, .36, 1)
+    0.25s
+    forwards;
+
+
+}
+
+/* =========================================================
+ITCH.IO BUTTON
+========================================================= */
+
+.project-page.intro-started .itch-button {
+
+animation:
+    projectFadeUp
+    0.7s
+    cubic-bezier(.22, 1, .36, 1)
+    0.35s
+    forwards;
+
+
+}
+
+/* =========================================================
+SECTION HEADINGS
+========================================================= */
+
+.project-page.intro-started .section-heading {
+
+animation:
+    projectFadeUp
+    0.7s
+    cubic-bezier(.22, 1, .36, 1)
+    0.40s
+    forwards;
+
+
+}
+
+/* =========================================================
+PROJECT DETAILS
+========================================================= */
+
+.project-page.intro-started .detail-item {
+
+animation:
+    projectFadeUp
+    0.65s
+    cubic-bezier(.22, 1, .36, 1)
+    0.45s
+    forwards;
+
+
+}
+
+/* =========================================================
+PROJECT DOCUMENT
+========================================================= */
+
+.project-page.intro-started .document-card {
+
+animation:
+    projectFadeUp
+    0.65s
+    cubic-bezier(.22, 1, .36, 1)
+    0.55s
+    forwards;
+
+
+}
+
+/* =========================================================
+CONTRIBUTION CARDS
+========================================================= */
+
+.project-page.intro-started .contribution-card {
+
+animation:
+    projectFadeUp
+    0.65s
+    cubic-bezier(.22, 1, .36, 1)
+    0.60s
+    forwards;
+
+
+}
+
+/* =========================================================
+DESIGN CONTENT
+========================================================= */
+
+.project-page.intro-started .design-content {
+
+animation:
+    projectFadeUp
+    0.7s
+    cubic-bezier(.22, 1, .36, 1)
+    0.65s
+    forwards;
+
+
+}
+
+/* =========================================================
+DESIGN IMAGES
+========================================================= */
+
+.project-page.intro-started .design-image-card {
+
+animation:
+    projectFadeUp
+    0.65s
+    cubic-bezier(.22, 1, .36, 1)
+    0.70s
+    forwards;
+
+
+}
+
+/* =========================================================
+GAMEPLAY IMAGE
+========================================================= */
+
+.project-page.intro-started .gameplay-image-wrapper {
+
+animation:
+    projectFadeUp
+    0.7s
+    cubic-bezier(.22, 1, .36, 1)
+    0.75s
+    forwards;
+
+
+}
+
+/* =========================================================
+FOOTER
+========================================================= */
+
+.project-page.intro-started .project-footer {
+
+animation:
+    projectFadeUp
+    0.7s
+    cubic-bezier(.22, 1, .36, 1)
+    0.80s
+    forwards;
+
+
+}
+
+/* =========================================================
+ANIMATION
+========================================================= */
+
+@keyframes projectFadeUp {
+
+from {
+
+    opacity: 0;
+
+    transform:
+        translateY(25px);
+
+}
+
+to {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+}
+
+/* =========================================================
+REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+.project-page.intro-started .project-header,
+.project-page.intro-started .hero-video,
+.project-page.intro-started .hero-info,
+.project-page.intro-started .itch-button,
+.project-page.intro-started .section-heading,
+.project-page.intro-started .detail-item,
+.project-page.intro-started .document-card,
+.project-page.intro-started .contribution-card,
+.project-page.intro-started .design-content,
+.project-page.intro-started .design-image-card,
+.project-page.intro-started .gameplay-image-wrapper,
+.project-page.intro-started .project-footer {
+
+    animation: none;
+
+    opacity: 1;
+
+    transform: none;
+
+}
+
+
+}

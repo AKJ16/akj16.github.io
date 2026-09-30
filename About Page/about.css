@@ -1283,3 +1283,182 @@ VERY SMALL PHONES
 }
 
 }
+
+/* =========================================================
+   ABOUT PAGE INTRO ANIMATION
+   ========================================================= */
+
+/*
+ * Initial state.
+ *
+ * Elements start slightly below their final position
+ * and fade into view.
+ */
+
+.page.intro-started .about-content,
+.page.intro-started .about-header,
+.page.intro-started .about-section,
+.page.intro-started .about-card,
+.page.intro-started .about-image,
+.page.intro-started .about-text,
+.page.intro-started .about-title,
+.page.intro-started .about-description {
+    opacity: 0;
+    transform: translateY(25px);
+}
+
+
+/* =========================================================
+   MAIN ABOUT CONTENT
+   ========================================================= */
+
+.page.intro-started .about-content {
+    animation:
+        aboutFadeUp
+        0.7s
+        cubic-bezier(.22, 1, .36, 1)
+        0.05s
+        forwards;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.page.intro-started .about-header {
+    animation:
+        aboutFadeUp
+        0.7s
+        cubic-bezier(.22, 1, .36, 1)
+        0.15s
+        forwards;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.page.intro-started .about-title {
+    animation:
+        aboutFadeUp
+        0.7s
+        cubic-bezier(.22, 1, .36, 1)
+        0.20s
+        forwards;
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.page.intro-started .about-image {
+    animation:
+        aboutFadeUp
+        0.7s
+        cubic-bezier(.22, 1, .36, 1)
+        0.25s
+        forwards;
+}
+
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+.page.intro-started .about-text {
+    animation:
+        aboutFadeUp
+        0.7s
+        cubic-bezier(.22, 1, .36, 1)
+        0.30s
+        forwards;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.page.intro-started .about-description {
+    animation:
+        aboutFadeUp
+        0.7s
+        cubic-bezier(.22, 1, .36, 1)
+        0.35s
+        forwards;
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.page.intro-started .about-section {
+    animation:
+        aboutFadeUp
+        0.7s
+        cubic-bezier(.22, 1, .36, 1)
+        0.45s
+        forwards;
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.page.intro-started .about-card {
+    animation:
+        aboutFadeUp
+        0.65s
+        cubic-bezier(.22, 1, .36, 1)
+        0.50s
+        forwards;
+}
+
+
+/* =========================================================
+   ANIMATION
+   ========================================================= */
+
+@keyframes aboutFadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .page.intro-started .about-content,
+    .page.intro-started .about-header,
+    .page.intro-started .about-section,
+    .page.intro-started .about-card,
+    .page.intro-started .about-image,
+    .page.intro-started .about-text,
+    .page.intro-started .about-title,
+    .page.intro-started .about-description {
+
+        animation: none;
+        opacity: 1;
+        transform: none;
+
+    }
+
+}
+

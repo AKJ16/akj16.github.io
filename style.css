@@ -2079,3 +2079,281 @@ a {
 #contact {
     scroll-margin-top: 0px;
 }
+
+/* =========================================================
+   PAGE INTRO ANIMATION
+   ========================================================= */
+
+.page.intro-started .profile-image,
+.page.intro-started .profile-label,
+.page.intro-started .profile h1,
+.page.intro-started .profile-description,
+.page.intro-started .profile-navigation,
+.page.intro-started .social-links,
+.page.intro-started .copyright,
+.page.intro-started .hero-heading,
+.page.intro-started .featured-grid {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+
+/* =========================================================
+   PROFILE
+   ========================================================= */
+
+.page.intro-started .profile-image {
+    animation:
+        introFadeUp
+        0.75s
+        cubic-bezier(.22, 1, .36, 1)
+        0.05s
+        forwards;
+}
+
+.page.intro-started .profile-label {
+    animation:
+        introFadeUp
+        0.75s
+        cubic-bezier(.22, 1, .36, 1)
+        0.15s
+        forwards;
+}
+
+.page.intro-started .profile h1 {
+    animation:
+        introFadeUp
+        0.75s
+        cubic-bezier(.22, 1, .36, 1)
+        0.25s
+        forwards;
+}
+
+.page.intro-started .profile-description {
+    animation:
+        introFadeUp
+        0.75s
+        cubic-bezier(.22, 1, .36, 1)
+        0.35s
+        forwards;
+}
+
+.page.intro-started .profile-navigation {
+    animation:
+        introFadeUp
+        0.75s
+        cubic-bezier(.22, 1, .36, 1)
+        0.45s
+        forwards;
+}
+
+.page.intro-started .social-links {
+    animation:
+        introFadeUp
+        0.75s
+        cubic-bezier(.22, 1, .36, 1)
+        0.55s
+        forwards;
+}
+
+.page.intro-started .copyright {
+    animation:
+        introFadeUp
+        0.75s
+        cubic-bezier(.22, 1, .36, 1)
+        0.60s
+        forwards;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.page.intro-started .hero-heading {
+    animation:
+        introFadeUp
+        0.8s
+        cubic-bezier(.22, 1, .36, 1)
+        0.65s
+        forwards;
+}
+
+
+/* =========================================================
+   FEATURED PROJECTS INTRO
+   ========================================================= */
+
+.page.intro-started .featured-grid {
+    opacity: 0;
+
+    /*
+     * IMPORTANT:
+     * Preserve the existing translateX(-30px)
+     * while adding the vertical intro movement.
+     */
+    animation:
+        featuredGridIntro
+        0.9s
+        cubic-bezier(.22, 1, .36, 1)
+        0.75s
+        forwards;
+}
+
+
+@keyframes featuredGridIntro {
+
+    from {
+        opacity: 0;
+        transform: translateX(-30px) translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-30px) translateY(0);
+    }
+
+}
+
+
+
+/* =========================================================
+   ANIMATION
+   ========================================================= */
+
+@keyframes introFadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .page.intro-started .profile-image,
+    .page.intro-started .profile-label,
+    .page.intro-started .profile h1,
+    .page.intro-started .profile-description,
+    .page.intro-started .profile-navigation,
+    .page.intro-started .social-links,
+    .page.intro-started .copyright,
+    .page.intro-started .hero-heading,
+    .page.intro-started .featured-grid {
+
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+
+}
+
+/* =========================================================
+   ANCHOR NAVIGATION
+   ========================================================= */
+
+/*
+ * During navigation from the top, keep the entire scroll
+ * container physically stable.
+ */
+
+.page.anchor-navigation .scroll-content {
+    opacity: 1;
+    transform: translateY(0);
+    transition: none !important;
+}
+
+
+/*
+ * Every section is positioned normally while scrolling.
+ */
+
+.page.anchor-navigation
+.scroll-content
+.section {
+
+    transform: translateY(0);
+    transition: none !important;
+
+}
+
+
+/* =========================================================
+   SECTION INITIAL STATE
+   ========================================================= */
+
+/*
+ * Hide sections before their individual animation begins.
+ */
+
+.page.anchor-navigation
+.scroll-content
+.section:not(.anchor-reveal) {
+
+    opacity: 0;
+
+}
+
+
+/* =========================================================
+   SECTION REVEAL
+   ========================================================= */
+
+.page.anchor-navigation
+.scroll-content
+.section.anchor-reveal {
+
+    animation:
+        anchorSectionReveal
+        0.65s
+        cubic-bezier(.22, 1, .36, 1)
+        forwards;
+
+}
+
+
+@keyframes anchorSectionReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .page.anchor-navigation
+    .scroll-content
+    .section {
+
+        animation: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+
+    }
+
+}
+
