@@ -26,24 +26,13 @@ document.addEventListener("DOMContentLoaded", () => {
        INTRO ANIMATION
        ========================================================= */
 
-    requestAnimationFrame(() => {
+    document.documentElement.classList.remove("intro-pending");
 
-        requestAnimationFrame(() => {
+    page.classList.add("intro-started");
 
-            page.classList.add("intro-started");
-
-            /*
-             * Shorter intro duration so the page feels
-             * responsive rather than slow.
-             */
-
-            setTimeout(() => {
-                page.classList.remove("intro-started");
-            }, 1500);
-
-        });
-
-    });
+    setTimeout(() => {
+        page.classList.remove("intro-started");
+    }, 1500);
 
 
     /* =========================================================

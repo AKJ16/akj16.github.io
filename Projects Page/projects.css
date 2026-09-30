@@ -569,6 +569,8 @@ display: flex;
 
 flex-direction: column;
 
+/* Changed from space-between */
+
 justify-content: flex-start;
 
 align-items: flex-start;
@@ -1011,19 +1013,12 @@ border:
 }
 
 .design-image-card img {
-
-width: auto;
-
-max-width: 100%;
-
-max-height: 400px;
-
-height: auto;
-
-object-fit: contain;
-
-margin: 0 auto;
-
+    width: auto;
+    max-width: 100%;
+    max-height: 400px;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
 }
 
 .design-image-card:hover img {
@@ -1353,9 +1348,7 @@ MOBILE
 }
 
 .design-image-card img {
-
     max-height: 300px;
-
 }
 
 /* GAMEPLAY */
@@ -1418,9 +1411,33 @@ VERY SMALL PHONES
 
 }
 
+/* =========================================================
+   PAGE INTRO — PREVENT FIRST-PAINT FLASH
+   ========================================================= */
+
+.intro-pending .project-page .project-header,
+.intro-pending .project-page .hero-video,
+.intro-pending .project-page .hero-info,
+.intro-pending .project-page .itch-button,
+.intro-pending .project-page .section-heading,
+.intro-pending .project-page .detail-item,
+.intro-pending .project-page .document-card,
+.intro-pending .project-page .contribution-card,
+.intro-pending .project-page .design-content,
+.intro-pending .project-page .design-image-card,
+.intro-pending .project-page .gameplay-image-wrapper,
+.intro-pending .project-page .project-footer {
+
+    opacity: 0;
+
+    transform:
+        translateY(25px);
+
+}
+
 
 /* =========================================================
-MINDSCOPE PAGE INTRO ANIMATION
+PAGE INTRO ANIMATION
 ========================================================= */
 
 /*
@@ -1470,7 +1487,7 @@ animation:
 }
 
 /* =========================================================
-HERO
+HERO VIDEO
 ========================================================= */
 
 .project-page.intro-started .hero-video {
@@ -1484,6 +1501,10 @@ animation:
 
 
 }
+
+/* =========================================================
+HERO INFORMATION
+========================================================= */
 
 .project-page.intro-started .hero-info {
 

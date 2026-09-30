@@ -1285,155 +1285,82 @@ VERY SMALL PHONES
 }
 
 /* =========================================================
-   ABOUT PAGE INTRO ANIMATION
-   ========================================================= */
+   PAGE INTRO — PREVENT FIRST-PAINT FLASH
+========================================================= */
 
-/*
- * Initial state.
- *
- * Elements start slightly below their final position
- * and fade into view.
- */
-
-.page.intro-started .about-content,
-.page.intro-started .about-header,
-.page.intro-started .about-section,
-.page.intro-started .about-card,
-.page.intro-started .about-image,
-.page.intro-started .about-text,
-.page.intro-started .about-title,
-.page.intro-started .about-description {
+.intro-pending .page .profile,
+.intro-pending .page .content {
     opacity: 0;
-    transform: translateY(25px);
 }
 
 
 /* =========================================================
-   MAIN ABOUT CONTENT
-   ========================================================= */
+   ABOUT PAGE INTRO
+========================================================= */
 
-.page.intro-started .about-content {
+.page.intro-started .profile,
+.page.intro-started .content {
+
+    opacity: 0;
+
+    transform:
+        translateY(25px);
+
     animation:
         aboutFadeUp
         0.7s
         cubic-bezier(.22, 1, .36, 1)
-        0.05s
         forwards;
+
 }
 
 
 /* =========================================================
-   HEADER
-   ========================================================= */
+   PROFILE DELAY
+========================================================= */
 
-.page.intro-started .about-header {
-    animation:
-        aboutFadeUp
-        0.7s
-        cubic-bezier(.22, 1, .36, 1)
-        0.15s
-        forwards;
+.page.intro-started .profile {
+
+    animation-delay:
+        0.05s;
+
 }
 
 
 /* =========================================================
-   TITLE
-   ========================================================= */
+   CONTENT DELAY
+========================================================= */
 
-.page.intro-started .about-title {
-    animation:
-        aboutFadeUp
-        0.7s
-        cubic-bezier(.22, 1, .36, 1)
-        0.20s
-        forwards;
-}
+.page.intro-started .content {
 
+    animation-delay:
+        0.15s;
 
-/* =========================================================
-   IMAGE
-   ========================================================= */
-
-.page.intro-started .about-image {
-    animation:
-        aboutFadeUp
-        0.7s
-        cubic-bezier(.22, 1, .36, 1)
-        0.25s
-        forwards;
-}
-
-
-/* =========================================================
-   TEXT
-   ========================================================= */
-
-.page.intro-started .about-text {
-    animation:
-        aboutFadeUp
-        0.7s
-        cubic-bezier(.22, 1, .36, 1)
-        0.30s
-        forwards;
-}
-
-
-/* =========================================================
-   DESCRIPTION
-   ========================================================= */
-
-.page.intro-started .about-description {
-    animation:
-        aboutFadeUp
-        0.7s
-        cubic-bezier(.22, 1, .36, 1)
-        0.35s
-        forwards;
-}
-
-
-/* =========================================================
-   SECTIONS
-   ========================================================= */
-
-.page.intro-started .about-section {
-    animation:
-        aboutFadeUp
-        0.7s
-        cubic-bezier(.22, 1, .36, 1)
-        0.45s
-        forwards;
-}
-
-
-/* =========================================================
-   CARDS
-   ========================================================= */
-
-.page.intro-started .about-card {
-    animation:
-        aboutFadeUp
-        0.65s
-        cubic-bezier(.22, 1, .36, 1)
-        0.50s
-        forwards;
 }
 
 
 /* =========================================================
    ANIMATION
-   ========================================================= */
+========================================================= */
 
 @keyframes aboutFadeUp {
 
     from {
+
         opacity: 0;
-        transform: translateY(25px);
+
+        transform:
+            translateY(25px);
+
     }
 
     to {
+
         opacity: 1;
-        transform: translateY(0);
+
+        transform:
+            translateY(0);
+
     }
 
 }
@@ -1441,24 +1368,25 @@ VERY SMALL PHONES
 
 /* =========================================================
    REDUCED MOTION
-   ========================================================= */
+========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
-    .page.intro-started .about-content,
-    .page.intro-started .about-header,
-    .page.intro-started .about-section,
-    .page.intro-started .about-card,
-    .page.intro-started .about-image,
-    .page.intro-started .about-text,
-    .page.intro-started .about-title,
-    .page.intro-started .about-description {
+    .page.intro-started .profile,
+    .page.intro-started .content {
 
-        animation: none;
-        opacity: 1;
-        transform: none;
+        animation:
+            none;
+
+        opacity:
+            1;
+
+        transform:
+            none;
 
     }
 
 }
+
+
 

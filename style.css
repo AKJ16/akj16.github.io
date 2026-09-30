@@ -2081,6 +2081,23 @@ a {
 }
 
 /* =========================================================
+   PAGE INTRO — PREVENT FIRST-PAINT FLASH
+   ========================================================= */
+
+.intro-pending .page .profile-image,
+.intro-pending .page .profile-label,
+.intro-pending .page .profile h1,
+.intro-pending .page .profile-description,
+.intro-pending .page .profile-navigation,
+.intro-pending .page .social-links,
+.intro-pending .page .copyright,
+.intro-pending .page .hero-heading,
+.intro-pending .page .featured-grid {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* =========================================================
    PAGE INTRO ANIMATION
    ========================================================= */
 

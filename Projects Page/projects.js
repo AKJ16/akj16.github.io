@@ -1,9 +1,9 @@
 /* =========================================================
-ECO RANGERS PROJECT PAGE
+PROJECT PAGE
 ========================================================= */
 
 /* =========================================================
-ECO RANGERS PROJECT PAGE INTRO
+PAGE INTRO
 ========================================================= */
 
 if ("scrollRestoration" in history) {
@@ -32,24 +32,13 @@ setTimeout(() => {
    INTRO ANIMATION
    ===================================================== */
 
-requestAnimationFrame(() => {
+document.documentElement.classList.remove("intro-pending");
 
-    requestAnimationFrame(() => {
+    page.classList.add("intro-started");
 
-        page.classList.add("intro-started");
-
-        /*
-         * Remove the intro state after all animations
-         * have finished.
-         */
-
-        setTimeout(() => {
-            page.classList.remove("intro-started");
-        }, 1500);
-
-    });
-
-});
+    setTimeout(() => {
+        page.classList.remove("intro-started");
+    }, 1500);
 
 
 });
@@ -357,6 +346,5 @@ window.addEventListener(
 
     }
 );
-
 
 }

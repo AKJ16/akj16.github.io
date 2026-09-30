@@ -18,11 +18,15 @@
 
 <title>About Me | Adriel Kevin Jonathan</title>
 
+<script>
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        document.documentElement.classList.add("intro-pending");
+    }
+</script>
+
 <link rel="stylesheet" href="about.css">
 
 </head> 
-
-<script src="about.js"></script>
 <body> 
 
     <div class="page">
@@ -596,7 +600,6 @@
 
             <a
                 class="contact-card"
-                href="#"
             >
 
                 <i class="fa-brands fa-discord"></i>
@@ -674,4 +677,8 @@
 
 </main>
 
-</div> </body> </html>
+</div> 
+
+<script src="about.js"></script>
+
+</body> </html>
